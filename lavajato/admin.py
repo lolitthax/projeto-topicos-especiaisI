@@ -9,7 +9,8 @@ class Clientes(admin.ModelAdmin):
 admin.site.register(Cliente, Clientes)
 
 class Veiculos(admin.ModelAdmin):
-    list_display = ('id', 'placa', 'ano', 'modelo', 'cor', 'descricao')
-    list_display_links = ('id', 'placa')
+    list_display = ('id', 'placa', 'ano', 'modelo', 'cor', 'descricao','cliente')
+    list_display_links = ('id', 'placa','cliente')
     search_fields = ('placa',)
+    list_per_page = 20
 admin.site.register(Veiculo, Veiculos)

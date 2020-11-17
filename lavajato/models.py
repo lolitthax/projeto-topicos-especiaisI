@@ -15,6 +15,6 @@ class Veiculo(models.Model):
     modelo = models.CharField(max_length=30)
     cor = models.CharField(max_length=30)
     descricao = models.CharField(max_length=50)
-
+    cliente = models.ForeignKey(Cliente, on_delete=models.CASCADE)
     def __str__(self):
         return self.placa
